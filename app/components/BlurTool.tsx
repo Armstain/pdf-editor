@@ -25,17 +25,19 @@ export function BlurTool({ canvas }: BlurToolProps) {
       width: 0,
       height: 0,
       fill: new Gradient({
-        type: 'linear',
+        type: 'radial',
         coords: {
-          x1: 0,
-          y1: 0,
-          x2: 100,
-          y2: 100,
+          r1: 0,
+          r2: 50,
+          x1: 25,
+          y1: 25,
+          x2: 25,
+          y2: 25,
         },
         colorStops: [
           { offset: 0, color: 'rgba(255,255,255,0.9)' },
-          { offset: 0.5, color: 'rgba(255,255,255,0.7)' },
-          { offset: 1, color: 'rgba(255,255,255,0.5)' }
+          { offset: 0.5, color: 'rgba(255,255,255,0.8)' },
+          { offset: 1, color: 'rgba(255,255,255,0.8)' }
         ]
       }),
       rx: 10,
